@@ -15,7 +15,9 @@ export default function Home() {
         header={
           <Header height={60} p="xs">
             {/* Header content */}
-            <Title order={2}>AMDちゃんねる</Title>
+            <Title order={2} align="center">
+              AMDちゃんねる
+            </Title>
           </Header>
         }
       >
