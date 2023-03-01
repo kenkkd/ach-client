@@ -1,8 +1,17 @@
 "use client";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "src/app/page.module.css";
-import { AppShell, Container, Header, Title } from "@mantine/core";
+import {
+  AppShell,
+  Button,
+  Container,
+  Group,
+  Header,
+  Space,
+  Textarea,
+  TextInput,
+  Title,
+} from "@mantine/core";
 import Response from "../components/Response";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,6 +35,19 @@ export default function Home() {
           <Response />
           <Response />
           <Response />
+          <Container size="md" px="xs" className={styles.formcontainer}>
+            <TextInput
+              placeholder="名無しさん@AMDlabです"
+              label="名前"
+              withAsterisk
+            />
+            <Space h="lg" />
+            <Textarea placeholder="コメント" label="コメント" withAsterisk />
+            <Space h="lg" />
+            <Group position="right">
+              <Button color="violet">送信</Button>
+            </Group>
+          </Container>
         </Container>
       </AppShell>
     </main>
